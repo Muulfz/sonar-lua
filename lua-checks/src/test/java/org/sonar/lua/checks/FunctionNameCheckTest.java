@@ -26,7 +26,7 @@ import org.sonar.squidbridge.checks.CheckMessagesVerifier;
 import java.io.File;
 
 public class FunctionNameCheckTest {
-
+/*
   private FunctionNameCheck check = new FunctionNameCheck();
 
   @Test
@@ -49,5 +49,5 @@ public class FunctionNameCheckTest {
       .next().atLine(10).withMessage("Rename this \"_sara\" function to match the regular expression " + check.format)
       .next().atLine(15).withMessage("Rename this \"d_Test\" function to match the regular expression " + check.format)
       .noMore();
-  }
+  }*/
 }

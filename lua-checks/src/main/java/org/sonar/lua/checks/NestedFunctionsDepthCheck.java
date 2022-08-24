@@ -33,11 +33,14 @@ import org.sonar.sslr.parser.LexerlessGrammar;
 
 import javax.annotation.Nullable;
 
+import static org.sonar.lua.checks.utils.Tags.*;
+import static org.sonar.squidbridge.annotations.Tags.PITFALL;
+
 @Rule(
   key = "NestedFunction",
   name = " \"function\" should not be nested ",
   priority = Priority.MAJOR,
-  tags = Tags.PITFALL)
+  tags = PITFALL)
 @ActivatedByDefault
 @SqaleConstantRemediation("10min")
 public class NestedFunctionsDepthCheck extends SquidCheck<LexerlessGrammar> {

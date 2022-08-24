@@ -19,7 +19,6 @@
  */
 package org.sonar.plugins.lua;
 
-import org.sonar.api.profiles.ProfileDefinition;
 import org.sonar.api.profiles.RulesProfile;
 import org.sonar.api.rules.RuleFinder;
 import org.sonar.api.utils.ValidationMessages;
@@ -27,7 +26,7 @@ import org.sonar.lua.checks.CheckList;
 import org.sonar.plugins.lua.core.Lua;
 import org.sonar.squidbridge.annotations.AnnotationBasedProfileBuilder;
 
-public class LuaProfile extends ProfileDefinition {
+public class LuaProfile extends RulesProfile {
 
   private final RuleFinder ruleFinder;
 
@@ -35,7 +34,6 @@ public class LuaProfile extends ProfileDefinition {
     this.ruleFinder = ruleFinder;
   }
 
-  @Override
   public RulesProfile createProfile(ValidationMessages validation) {
     AnnotationBasedProfileBuilder annotationBasedProfileBuilder = new AnnotationBasedProfileBuilder(ruleFinder);
     return annotationBasedProfileBuilder.build(

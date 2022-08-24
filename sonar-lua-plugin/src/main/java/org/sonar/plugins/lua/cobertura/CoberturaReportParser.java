@@ -27,10 +27,9 @@ import org.sonar.api.batch.fs.FilePredicates;
 import org.sonar.api.batch.fs.FileSystem;
 import org.sonar.api.batch.fs.InputFile;
 import org.sonar.api.batch.sensor.SensorContext;
-import org.sonar.api.batch.sensor.coverage.CoverageType;
 import org.sonar.api.batch.sensor.coverage.NewCoverage;
 import org.sonar.api.utils.ParsingUtils;
-import org.sonar.api.utils.StaxParser;
+import org.sonar.plugins.lua.StaxParser;
 import org.sonar.plugins.lua.core.Lua;
 
 import javax.xml.stream.XMLStreamException;
@@ -95,7 +94,6 @@ public class CoberturaReportParser {
           clazz,
           context.newCoverage()
             .onFile(inputFile)
-            .ofType(CoverageType.UNIT)
         );
       } else {
         SMInputCursor line = clazz.childElementCursor("lines").advance().childElementCursor("line");

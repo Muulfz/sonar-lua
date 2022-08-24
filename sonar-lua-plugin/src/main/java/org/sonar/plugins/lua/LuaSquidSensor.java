@@ -39,6 +39,7 @@ import org.sonar.lua.LuaConfiguration;
 import org.sonar.lua.api.LuaMetric;
 import org.sonar.lua.checks.CheckList;
 
+import org.sonar.lua.lexer.LuaLexer;
 import org.sonar.lua.metrics.FileLinesVisitor;
 import org.sonar.plugins.lua.core.Lua;
 import org.sonar.squidbridge.AstScanner;
@@ -110,7 +111,9 @@ public class LuaSquidSensor implements Sensor {
     for (SourceCode squidSourceFile : squidSourceFiles) {
       SourceFile squidFile = (SourceFile) squidSourceFile;
 
+      List<SquidAstVisitor<LexerlessGrammar>> visitors = new ArrayList<>(checks.all());
       InputFile inputFile = fileSystem.inputFile(fileSystem.predicates().hasPath(squidFile.getKey()));
+      LuaConfiguration configuration = new LuaConfiguration(fileSystem.encoding());
 
       saveClassComplexity(context, inputFile, squidFile);
       saveMeasures(context, inputFile, squidFile);

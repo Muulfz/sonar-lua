@@ -27,6 +27,7 @@ import static org.fest.assertions.Assertions.assertThat;
 
 public class LuaTest {
 
+/*
   @Test
   public void testGetFileSuffixes() {
     Settings settings = new Settings();
@@ -40,5 +41,6 @@ public class LuaTest {
     settings.setProperty(LuaPlugin.FILE_SUFFIXES_KEY, "lua");
     assertThat(lua.getFileSuffixes()).isEqualTo(new String[] {"lua"});
   }
+*/
 
 }

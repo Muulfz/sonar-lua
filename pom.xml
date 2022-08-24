@@ -10,7 +10,7 @@
 
   <groupId>org.sonarsource.lua</groupId>
   <artifactId>lua</artifactId>
-  <version>1.1</version>
+  <version>1.0</version>
   <packaging>pom</packaging>
 
   <name>Sonar Lua</name>
@@ -29,13 +29,13 @@
       <id>ahmadi</id>
       <name>Fati</name>
     </developer>
-   
+
   </developers>
 
 <modules>
     <module>lua-squid</module>
     <module>lua-checks</module>
-    <module>sonar-lua-plugin</module>   
+    <module>sonar-lua-plugin</module>
     <module>sslr-lua-toolkit</module>
 </modules>
 
@@ -49,20 +49,20 @@
     <system>JIRA</system>
     <url>https://github.com/SonarQubeCommunity/sonar-lua/issues</url>
   </issueManagement>
- 
+
 
   <properties>
     <license.title>SonarQube Lua Plugin</license.title>
     <maven.test.redirectTestOutputToFile>true</maven.test.redirectTestOutputToFile>
 
-    <sonar.version>5.6</sonar.version>
+    <sonar.version>9.4.0.54424</sonar.version>
     <sslr.version>1.21</sslr.version>
     <logback.version>1.0.13</logback.version>
     <junit.version>4.12</junit.version>
     <fest.version>1.4</fest.version>
     <orchestrator.version>3.12</orchestrator.version>
 
-    <gitRepositoryName>sonar-lua</gitRepositoryName>   
+    <gitRepositoryName>sonar-lua</gitRepositoryName>
 
   </properties>
 

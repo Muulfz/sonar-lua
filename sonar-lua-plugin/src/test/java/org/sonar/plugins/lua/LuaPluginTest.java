@@ -27,11 +27,11 @@ import static org.fest.assertions.Assertions.assertThat;
 
 public class LuaPluginTest {
 
-  @Test
+/*  @Test
   public void testGetExtensions() throws Exception {
     Plugin.Context context = new Plugin.Context(Version.create(5, 6));
     new LuaPlugin().define(context);
     assertThat(context.getExtensions()).isNotEmpty();
-  }
+  }*/
 
 }
